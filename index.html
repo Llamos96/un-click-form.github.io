@@ -14,15 +14,16 @@
 body{
 	background: #eee;
 }
-.area-form-container{
+.form-container{
 	background: white;
-	width: 60%;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	width: 95%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-radius: 15px;
+	padding: 7%;
 	
 }
-.area-form-container img{
+.form-container img{
 	width: 70%;
 }
 .text{
@@ -31,12 +32,12 @@ body{
 	</style>
 </head>
 <body>
-	<div class="container p-5 shadow area-form-container" style="color:gray">
+	<div class="container shadow form-container" style="color:gray">
 		<div class="text-center">
 			<img src="contract.png">
 		</div><br><br>	
 		<h2>Formulario de aspirante</h2>
-		<form id="gform" name="gform" action="https://docs.google.com/forms/d/1IJm6Omyedo6pVL8YLc5RG18k6RVttOiJ0LhzdpIOz9A/formResponse" target="hidden_iframe" onsubmit="submitted=true;">			
+		<form id="gform" name="gform" method="POST" action="https://formspree.io/f/xeqbjpyn" target="hidden_iframe" onsubmit="submitted=true;">			
 			<br>
 			<h3><i class="fa-solid fa-user"></i> Datos del aspirante</h3>
 			<p class="text">Su información personal es privada y la utilizamos estrictamente para comparar perfiles, se trata de escoger a nuestro trabajador ideal. Al final de nuestra selección toda la información que usted haya ingresado se eliminará por completo.
@@ -115,7 +116,7 @@ body{
 
 			<div class="row">	
 				<div class="form-group text-center">
-					<input type="submit" id="submit_btn" value="Enviar" class="submit btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#myModal"><br>				
+					<input type="submit" id="submit_btn" value="Aplicar" class="submit btn btn-primary text-white btn-lg" data-bs-toggle="modal" data-bs-target="#myModal"><br>				
 				</div>
 			</div>				
 
@@ -135,7 +136,6 @@ body{
 				  	</div>
 				</div>
 			</div>
-			<br><br>
 		</form>
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	</div>
